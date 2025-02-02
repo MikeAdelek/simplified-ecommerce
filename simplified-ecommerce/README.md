@@ -1,36 +1,156 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# E-commerce Platform
 
-First, run the development server:
+A simplified ecommerce platform built with Next.js, TypeScript, and Tailwind CSS. Features product listing, cart management, checkout process, and responsive design.
+
+## Features
+
+- Product listing with search functionality
+- Shopping cart with local storage persistence
+- Checkout process with form validation
+- Responsive design for all devices
+- Dark mode support
+- Dynamic product search
+- API integration with error handling
+
+## Prerequisites
+
+- Node.js (version 18 or higher)
+- npm or yarn
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+cd ecommerce-platform
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Start the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) to view the application
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+├── components/
+│   ├── ProductCard.tsx    # Product display component
+│   └── ui/               # UI components
+├── pages/
+│   ├── index.tsx         # Product listing page
+│   └── checkout.tsx      # Checkout page
+├── store/
+│   └── CartContext.tsx   # Cart state management
+└── types/
+    └── index.ts         # TypeScript types
+```
 
-## Learn More
+## Key Components
 
-To learn more about Next.js, take a look at the following resources:
+### ProductCard
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Displays individual product information:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Product image
+- Title
+- Price
+- Add to cart button
 
-## Deploy on Vercel
+### CartContext
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Manages shopping cart functionality:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Add/remove items
+- Calculate total
+- Persist cart data
+
+### Checkout Form
+
+Handles order completion:
+
+- Shipping information
+- Form validation
+- Order confirmation
+
+## Technologies Used
+
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+- React Context API
+- Local Storage
+
+## Development
+
+### Available Scripts
+
+```bash
+npm run dev      # Start development server
+npm run build    # Build for production
+npm start        # Start production server
+npm run lint     # Run linting
+```
+
+### Type Checking
+
+```bash
+npm run type-check  # Run TypeScript compiler
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## API call
+
+Create a `fetch api` in Ecommerce App :
+
+```fetch
+https://fakestoreapi.com
+```
+
+## Troubleshooting
+
+Common issues and solutions:
+
+1. Images not loading:
+   - Check image paths
+   - Verify Next.js Image component usage
+
+2. API errors:
+   - Confirm API endpoint is accessible
+   - Check environment variables
+
+3. Build errors:
+
+   ```bash
+   # Clean install dependencies
+   npm clean-install
+   
+   # Remove .next folder and rebuild
+   rm -rf .next
+   npm run build
+   ```
+
+## License
+
+This project is licensed under the MIT License.
