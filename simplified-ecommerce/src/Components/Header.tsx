@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import Checkout from "./Checkout";
+import Checkout from "@/Components/Checkout";
 import { CartItem } from "@/app/type";
 import { Modal, Button, Result } from "antd";
 import { useCart } from "@/store/CartContext";
